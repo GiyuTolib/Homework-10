@@ -1,0 +1,106 @@
+footer{
+    background-color: #91916C;
+    padding-top: 42px;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background-color: white;
+        z-index: 2;
+    }
+    h1{
+        margin: auto;
+        margin-bottom: 81px;
+        width: 500px;
+        color: white;
+        font-weight: 700;
+        font-size: 3em;
+        line-height: 139%;
+        text-align: center;
+    }
+    .cart{
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        justify-content: center;
+        .image{
+            width: 418px;
+            height: 627px;
+            z-index: 3;
+        }
+        input{
+            font-size: 1.2em;
+            line-height: 135.5%;
+            color: #FFFFFF;
+            padding: 15px 25px;
+            width: 100%;
+            background-color: rgb(225, 225, 194, 0.4);
+            border-radius: 8px;
+            outline: none;
+            border: none;
+            &::placeholder{
+                color: white;
+            }
+        }
+        .a1{
+            width: 49%;
+        }
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            row-gap: 27px;
+            width: 600px;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+        button{
+            width: 100%;
+            color: #FFFFFF;
+            font-size: 1.2em;
+            font-weight: 700;
+            padding: 15px;
+            background: #E5A985;
+            border-radius: 8px;
+            transition: 0.3s ease-out;
+            border: none;
+            &:hover{
+                background-color: #fe7f30;
+            }
+        }
+    }
+    @media(max-width:1024px){
+        .cart{
+            gap: 30px;
+            .image{
+                height: 527px;
+            }
+        }
+    }
+    @media(max-width:756px){
+        .cart{
+            flex-wrap: wrap;
+            gap: 45px;
+            form{
+                margin-bottom: 110px;
+            }
+        }
+    }
+    @media(max-width:570px){
+        h1{
+            width: 100%;
+        }
+    }
+    @media(max-width:420px){
+        .cart{
+            .image{
+                height: 400px;
+                width: 100%;
+            }
+        }
+    }
+}

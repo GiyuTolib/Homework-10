@@ -1,0 +1,105 @@
+header{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: white;
+    nav{
+        padding: 45px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+        .image{
+            width: 198px;
+            height: 45px;
+        }
+        &>ul{
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            a{
+                color: #000000;
+                font-size: 1.2em;
+                &:hover{
+                    color: #91916C;
+                }
+            }
+        }
+        menu{
+            display: none;
+            input{
+                display: none;
+                &:checked ~ label{
+                    &:nth-of-type(1){
+                        display: none;
+                    }
+                    &:nth-of-type(2){
+                        display: block;
+                    }
+                }
+                &:checked ~ .menu-left{
+                    left: 0;
+                    box-shadow: 0 800px 0 800px #91916C30;
+                }
+            }
+            label{
+                color: black;
+                font-size: 28px;
+                &:nth-of-type(2){
+                    display: none;
+                }
+            }
+        }
+        .menu-left{
+            padding: 30px 6%;
+            background-color: #91916C;
+            position: fixed;
+            left: -330px;
+            height: calc(100% - 135px);
+            width: 330px;
+            top: 135px;
+            transition: 0.3s ease-out;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                a{
+                    font-size: 1.5em;
+                    color: white;
+                }
+            }
+        }
+    }
+    @media(max-width:1024px){
+        nav{
+            &>ul{
+                width: 70%;
+            }
+        }
+    }
+    @media(max-width:756px){
+        nav{
+            &>ul{
+                display: none;
+            }
+            menu{
+                display: flex;
+            }
+        }
+    }
+    @media(max-width:420px){
+        nav{
+            .image{
+                width: calc(198px * 0.8);
+                height: calc(45px * 0.8); 
+            }
+            menu{
+                display: flex;
+                .menu-left{
+                    width: 420px;
+                    left: -420px;
+                }
+            }
+        }
+    }
+}
